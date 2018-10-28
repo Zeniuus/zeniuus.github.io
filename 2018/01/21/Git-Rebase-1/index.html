@@ -141,15 +141,15 @@
 <h1 id="Git-Rebase로-Merge하기"><a href="#Git-Rebase로-Merge하기" class="headerlink" title="Git Rebase로 Merge하기"></a>Git Rebase로 Merge하기</h1><p>그럼 도대체 <code>git rebase</code>가 무엇을 하는 커맨드일까요? 이를 알아보기 전에, 실제로 <code>git rebase</code>를 많이 활용하는 상황을 한번 살펴보도록 하겠습니다.</p>
 <p><code>git rebase</code>가 유용하게 사용되는 첫 번째 사용처는 바로 merge 입니다. 앞서 말씀드린대로 <code>git rebase</code>를 사용하여 merge를 한다면 <code>git merge</code>로 merge하는 것보다 커밋 히스토리가 훨씬 깔끔하게 남기 때문에 다른 사람들의 작업을 보기가 편해집니다.</p>
 <p>만약에 아래와 같은 두 개의 브랜치를 merge한다고 합시다.</p>
-<p><img src="https://zeniuus.github.io/assets/images/git_rebase_example/git_two_branches.png" alt="Merge 전 두 개의 브랜치"></p>
+<p><img src="/images/git_rebase_example/git_two_branches.png" alt="Merge 전 두 개의 브랜치"></p>
 <p>두 개의 브랜치를 merge하기 위해서 보통</p>
 <pre><code>$ git checkout master
 $ git merge dev
 </code></pre><p>를 하겠죠? 그러면 아래와 같이 두 개의 브랜치를 3-way merging을 통해 merge하게 됩니다.</p>
-<p><img src="https://zeniuus.github.io/assets/images/git_rebase_example/git_merging_with_git_merge.png" alt="git merge를 통한 merge"></p>
+<p><img src="/images/git_rebase_example/git_merging_with_git_merge.png" alt="git merge를 통한 merge"></p>
 <p>많이들 보시던 브랜치의 모양이죠? <code>git merge</code>를 통해 merge를 하면 이런 식으로 2개의 커밋을 포인팅하는 새로운 커밋이 생기고 이를 브랜치가 가리키게 됩니다.</p>
 <p>이게 무엇이 문제냐 하면, 만약 여러명이 작업을 하고 있는 경우에 계속 <code>git merge</code>를 통해서 할 경우에 아래와 같이 지저분한 커밋 히스토리가 생기게 됩니다.</p>
-<p><img src="https://zeniuus.github.io/assets/images/git_rebase_example/git_dirty_commit_history.png" alt="지저분한 커밋 히스토리"></p>
+<p><img src="/images/git_rebase_example/git_dirty_commit_history.png" alt="지저분한 커밋 히스토리"></p>
 <p>이러면 다른 사람이 이 레포지토리에서 작업을 하려고 할 때 무슨 의도로 저런 작업들을 한건지 파악하기 힘들겠죠?</p>
 <p>여기가 바로 <code>git rebase</code>가 빛을 발할 때입니다. 만약</p>
 <pre><code>$ git rebase master dev
@@ -157,12 +157,12 @@ $ git merge dev
 <pre><code>$ git checkout dev
 $ git rebase master
 </code></pre><p>의 커맨드를 통해 merge를 했다면, 결과적으로 레포지토리에 남는 커밋 히스토리는 아래와 같은 모양을 띕니다.</p>
-<p><img src="https://zeniuus.github.io/assets/images/git_rebase_example/git_merging_with_git_rebase_1.png" alt="git rebase를 통한 merge 1"></p>
+<p><img src="/images/git_rebase_example/git_merging_with_git_rebase_1.png" alt="git rebase를 통한 merge 1"></p>
 <p>이 다음에 fast-forward를 시키기 위해</p>
 <pre><code>$ git checkout master
 $ git merge dev
 </code></pre><p>를 하면!</p>
-<p><img src="https://zeniuus.github.io/assets/images/git_rebase_example/git_merging_with_git_rebase_2.png" alt="git rebase를 통한 merge 2"></p>
+<p><img src="/images/git_rebase_example/git_merging_with_git_rebase_2.png" alt="git rebase를 통한 merge 2"></p>
 <p>짜잔~ 깔끔한 커밋 히스토리가 남게 되었습니다.</p>
 <h1 id="Git-Rebase는-무엇인가"><a href="#Git-Rebase는-무엇인가" class="headerlink" title="Git Rebase는 무엇인가?"></a>Git Rebase는 무엇인가?</h1><p><code>git rebase</code>는 어떻게 이런 깔끔한 커밋 히스토리를 남길 수 있었을까요?</p>
 <p><strong><code>git rebase</code>는 말 그대로 커밋의 base를 다시(re) 정하는 작업</strong>입니다. 우리가 입력했던</p>
