@@ -93,6 +93,9 @@ h1.blog-title {
 .articles {
   margin-top: 40px;
 }
+.articles > .private {
+  display: none;
+}
 .article-card {
   padding-bottom: 20px;
 }
@@ -193,7 +196,7 @@ h2.article-head {
   border-left: 1px solid #fff;
 }
 #article-banner.main {
-  padding: 30vh 20px;
+  padding: 25vh 20px;
 }
 .post-article {
   margin-top: 0;
