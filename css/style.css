@@ -93,7 +93,7 @@ h1.blog-title {
 .articles {
   margin-top: 40px;
 }
-.articles > .private {
+.articles> .private {
   display: none;
 }
 .article-card {
@@ -542,6 +542,7 @@ h2.article-head {
 .markdown-content p,
 .article-summary p {
   line-height: 1.6em;
+  margin-bottom: 15px;
 }
 .markdown-content p code,
 .article-summary p code {
@@ -594,6 +595,10 @@ h2.article-head {
   border-bottom-right-radius: 2px;
   border-top-right-radius: 2px;
 }
+.markdown-content blockquote>p,
+.article-summary blockquote>p {
+  margin: 0;
+}
 .markdown-content ul,
 .article-summary ul,
 .markdown-content ol,
@@ -607,12 +612,24 @@ h2.article-head {
 .article-summary ol li {
   padding: 5px 0;
 }
+.markdown-content li > ul,
+.article-summary li > ul,
+.markdown-content li > ol,
+.article-summary li > ol {
+  margin: 5px 0 0;
+}
 .markdown-content img,
 .article-summary img {
   max-width: 100%;
   display: block;
-  margin: 20px auto;
+  margin: 20px auto 0;
   cursor: zoom-in;
+}
+.markdown-content .image-caption,
+.article-summary .image-caption {
+  display: block;
+  text-align: center;
+  font-size: 0.9em;
 }
 .markdown-content figure,
 .article-summary figure {
