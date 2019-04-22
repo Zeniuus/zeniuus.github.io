@@ -143,6 +143,25 @@
     <article class="article-card">
       <div>
         <h2 class="article-head">
+          <a href="/2017/06/26/jekyll-blog-customizing-example/">Jekyll 블로그 커스터마이징 예시</a>
+        </h2>
+        
+          <span class="article-category">Develop</span>
+        
+      </div>
+      <p class="article-date">June 26, 2017</p>
+      
+      <div class="article-summary">
+        
+        안녕하세요, 이번 포스트에서는 지난 포스트에서 배운 Jekyll project의 파일 구조를 바탕으로 실제로 제 Jekyll 블로그를 어떻게 커스터마이징하는지를 보여드리도록 하겠습니다. 파일 구조에 대한 원론적인 이해도 중요하지만, 이를 실제로 어떻게 활용하는지 ...
+        
+      </div>
+      <a class="more" href="/2017/06/26/jekyll-blog-customizing-example/">Read more</a>
+    </article>
+    
+    <article class="article-card">
+      <div>
+        <h2 class="article-head">
           <a href="/2017/06/23/jekyll-project-structure/">Jekyll project 폴더 파일 구조 파헤치기</a>
         </h2>
         
@@ -239,21 +258,23 @@
 <script>
   var hasLine = 'true';
   async("//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js", function(){
-    async("//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/kotlin.min.js", function(){
-      $('figure pre').each(function(i, block) {
-        var figure = $(this).parents('figure');
-        if (hasLine === 'false') {
-          figure.find('.gutter').hide();
-        }
-        var lang = figure.attr('class').split(' ')[1] || 'code';
-        var codeHtml = $(this).html();
-        var codeTag = document.createElement('code');
-        codeTag.className = lang;
-        codeTag.innerHTML = codeHtml;
-        $(this).attr('class', '').empty().html(codeTag);
-        figure.attr('data-lang', lang.toUpperCase());
-        hljs.highlightBlock(block);
-      });
+    async("//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js", function(){
+      async("//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/kotlin.min.js", function(){
+        $('figure pre').each(function(i, block) {
+          var figure = $(this).parents('figure');
+          if (hasLine === 'false') {
+            figure.find('.gutter').hide();
+          }
+          var lang = figure.attr('class').split(' ')[1] || 'code';
+          var codeHtml = $(this).html();
+          var codeTag = document.createElement('code');
+          codeTag.className = lang;
+          codeTag.innerHTML = codeHtml;
+          $(this).attr('class', '').empty().html(codeTag);
+          figure.attr('data-lang', lang.toUpperCase());
+          hljs.highlightBlock(block);
+        });
+      })
     })
   })
 </script>

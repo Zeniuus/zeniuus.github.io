@@ -143,6 +143,31 @@
     <article class="article-card">
       <div>
         <h2 class="article-head">
+          <a href="/2018/05/15/am-i-doing-alright/">2018.05.15.</a>
+        </h2>
+        
+          <span class="article-category">Diary</span>
+        
+      </div>
+      <p class="article-date">May 15, 2018</p>
+      
+      
+  <a href="/tags#Private">
+    <span class="tag-code">Private</span>
+  </a>
+
+      
+      <div class="article-summary">
+        
+        불과 작년까지만 해도 신입생 세미나만 들어도 얼이 빠지던 나는, 눈 깜짝할 새에 프로젝트를 이끄는 동아리의 중견이 되어있었다. 스스로도 미생인 주제에 다른 사람들, 하나의 프로젝트를 이끌어갈 자격이 있는지 자신은 없었다. 하지만 내가 자리에 걸맞는 실력을 갖추었 ...
+        
+      </div>
+      <a class="more" href="/2018/05/15/am-i-doing-alright/">Read more</a>
+    </article>
+    
+    <article class="article-card">
+      <div>
+        <h2 class="article-head">
           <a href="/2018/05/05/happiness-from-walk/">2018.05.05.</a>
         </h2>
         
@@ -231,26 +256,6 @@
       <a class="more" href="/2018/03/22/change-blog/">Read more</a>
     </article>
     
-    <article class="article-card">
-      <div>
-        <h2 class="article-head">
-          <a href="/2018/02/19/lendit-internship-review/">2018.02.19.</a>
-        </h2>
-        
-          <span class="article-category">Diary</span>
-        
-      </div>
-      <p class="article-date">February 19, 2018</p>
-      
-      <div class="article-summary">
-        
-        렌딧 인턴 후기두달 간의 인턴십이 끝났다. 초반 한달은 정말 천천히 갔는데, 후반 한달은 이전에 했던 일의 유지보수와 새로운 일이 겹치면서 정신없이 지나가버렸다.
-만족감, 아쉬움, 부족함, 동기부여 등 수많은 키워드로 표현할 수 밖에 없는 복잡한 두달이었다. 이 ...
-        
-      </div>
-      <a class="more" href="/2018/02/19/lendit-internship-review/">Read more</a>
-    </article>
-    
   </div>
 </main>
 <script>
@@ -292,21 +297,23 @@
 <script>
   var hasLine = 'true';
   async("//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js", function(){
-    async("//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/kotlin.min.js", function(){
-      $('figure pre').each(function(i, block) {
-        var figure = $(this).parents('figure');
-        if (hasLine === 'false') {
-          figure.find('.gutter').hide();
-        }
-        var lang = figure.attr('class').split(' ')[1] || 'code';
-        var codeHtml = $(this).html();
-        var codeTag = document.createElement('code');
-        codeTag.className = lang;
-        codeTag.innerHTML = codeHtml;
-        $(this).attr('class', '').empty().html(codeTag);
-        figure.attr('data-lang', lang.toUpperCase());
-        hljs.highlightBlock(block);
-      });
+    async("//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js", function(){
+      async("//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/kotlin.min.js", function(){
+        $('figure pre').each(function(i, block) {
+          var figure = $(this).parents('figure');
+          if (hasLine === 'false') {
+            figure.find('.gutter').hide();
+          }
+          var lang = figure.attr('class').split(' ')[1] || 'code';
+          var codeHtml = $(this).html();
+          var codeTag = document.createElement('code');
+          codeTag.className = lang;
+          codeTag.innerHTML = codeHtml;
+          $(this).attr('class', '').empty().html(codeTag);
+          figure.attr('data-lang', lang.toUpperCase());
+          hljs.highlightBlock(block);
+        });
+      })
     })
   })
 </script>
