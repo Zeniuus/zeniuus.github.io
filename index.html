@@ -134,10 +134,9 @@
 </header>
 
     <div id="article-banner" class="main">
-  <h2>Towards the Better UX for Developers</h2>
+  <h2>Recent Posts</h2>
 </div>
 <main class="app-body">
-  <h1 class="blog-title">Recent Posts</h1>
   <div class="articles">
     
       
@@ -146,20 +145,20 @@
         <article class="article-card">
           <div>
             <h2 class="article-head">
-              <a href="/2019/10/27/hibernate-detached-entity-proxy-initialization/">Hibernate Detached 엔티티 프록시의 초기화</a>
+              <a href="/2021/01/14/kubernetes-ops-components/">쿠버네티스 환경에서 서비스를 운영할 때 필요한 것들</a>
             </h2>
             
               <span class="article-category">Develop</span>
             
           </div>
-          <p class="article-date">October 27, 2019</p>
+          <p class="article-date">January 14, 2021</p>
           
           <div class="article-summary">
             
-            문제 상황Spring + Hibernate + Spring Data JPA 환경에서 다음과 같은 상황이 있었다.123456789fun doSomeTask(transactionTemplate: TransactionTemplate, entityRepository:  ...
+            작년 11월 중순부터 12월 중순까지 나는 타다 EKS 클러스터의 버전업 작업을 맡아서 진행했다. 타다 EKS 클러스터를 바닥부터 한땀한땀 띄워보면서 타다 백엔드 시스템이 무엇으로 구성되어 있고, 또 어떻게 동작하는지에 대해 정말 많이 배웠다. 그 때 배운 지식 ...
             
           </div>
-          <a class="more" href="/2019/10/27/hibernate-detached-entity-proxy-initialization/">Read more</a>
+          <a class="more" href="/2021/01/14/kubernetes-ops-components/">Read more</a>
         </article>
       
     
@@ -169,21 +168,21 @@
         <article class="article-card">
           <div>
             <h2 class="article-head">
-              <a href="/2019/10/06/review-clean-architecture/">클린 아키텍처 후기</a>
+              <a href="/2020/12/30/goodbye-2020/">2020년 회고</a>
             </h2>
             
               <span class="article-category">Develop</span>
             
           </div>
-          <p class="article-date">October 6, 2019</p>
+          <p class="article-date">December 30, 2020</p>
           
           <div class="article-summary">
             
-            개요얼마 전 &lt;클린 아키텍처&gt;를 읽고 나서 새롭게 바뀐 시각, 느낀 점을 정리했다.
-소프트웨어의 가장 중요한 가치는 쉽게 변화할 수 있는 성질이다우리는 어떤 복잡한 기능이나 요구사항을 구현해야 하는 상황이 오면 “설계를 잘하고 들어가야 한다”고 이야기 ...
+            이런저런 사건사고가 많았기 때문일까, 2020년은 유독 느리게 흘러간 것 같다. 그럼에도 시간은 착실히 흘러 어느덧 2년이라는 연차가 쌓였다. 그동안 나는 신입 티를 완전히 벗었고, 좀 더 개발자다워진 것 같다.
+2020년 때 주로 배운 건 코드를 잘 짜는 법은 ...
             
           </div>
-          <a class="more" href="/2019/10/06/review-clean-architecture/">Read more</a>
+          <a class="more" href="/2020/12/30/goodbye-2020/">Read more</a>
         </article>
       
     
@@ -197,25 +196,46 @@
         <article class="article-card">
           <div>
             <h2 class="article-head">
-              <a href="/2019/06/09/transaction-isolation-level-and-lock/">Lock으로 이해하는 Transaction의 Isolation Level</a>
+              <a href="/2020/04/11/backend-application-design-202004/">소프트웨어 개발과 설계</a>
             </h2>
             
               <span class="article-category">Develop</span>
             
           </div>
-          <p class="article-date">June 9, 2019</p>
+          <p class="article-date">April 11, 2020</p>
           
           <div class="article-summary">
             
-            개요내게 transaction의 isolation level은 개발할 때 항상 큰 찝찝함을 남기게 하는 요소였다. row를 읽기만 할 때는 REPEATABLE READ로, row를 삽입 / 수정 / 삭제할 때는 SERIALIZABLE로 isolation leve ...
+            개요백엔드 어플리케이션을 개발하면서 지금까지 소프트웨어 개발에 대해 고민한 것들을 정리한다.
+설계는 복잡성을 현명하게 다루기 위해 필요하다DDD 책의 표지를 보면 부제목으로 “소프트웨어의 복잡성을 다루는 지혜”라는 글귀가 적혀있다. 이것이야말로 어플리케이션 개발 ...
             
           </div>
-          <a class="more" href="/2019/06/09/transaction-isolation-level-and-lock/">Read more</a>
+          <a class="more" href="/2020/04/11/backend-application-design-202004/">Read more</a>
         </article>
       
     
       
       
+      
+        <article class="article-card">
+          <div>
+            <h2 class="article-head">
+              <a href="/2020/01/16/spring-transaction-common-mistakes/">Spring Transaction 사용 시 주의할 점</a>
+            </h2>
+            
+              <span class="article-category">Develop</span>
+            
+          </div>
+          <p class="article-date">January 16, 2020</p>
+          
+          <div class="article-summary">
+            
+            개요최근 몇 달 간 내가 Spring에서 트랜잭션을 사용할 때 겪었던 여러 문제 상황에 대해서 이야기하려고 한다.
+트랜잭션 안에서 트랜잭션을 새로 여는 경우트랜잭션 안에서 새로운 트랜잭션을 열 때의 동작 방식, 혹은 propagation behavior에 대해  ...
+            
+          </div>
+          <a class="more" href="/2020/01/16/spring-transaction-common-mistakes/">Read more</a>
+        </article>
       
     
   </div>
@@ -234,7 +254,7 @@
 </div>
     <footer class="app-footer">
   <p class="copyright">
-    &copy; 2019 | Proudly powered by <a href="https://hexo.io" target="_blank">Hexo</a>
+    &copy; 2021 | Proudly powered by <a href="https://hexo.io" target="_blank">Hexo</a>
     <br>
     Theme by <a href="https://github.com/yanm1ng">yanm1ng</a>
   </p>
